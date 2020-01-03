@@ -8,8 +8,8 @@ public class SelectionManager : MonoBehaviour
    [SerializeField] private string selectableTag = "Selectable";
    [SerializeField] private Material defaultMaterial;
    public GameObject Text;
-   public Drunk DrunkScript;
-   
+   public DrunkTimer DrunkTimer;
+   public GameObject Kalja;
    private Transform _selection;
    
    private void Update()
@@ -36,8 +36,9 @@ public class SelectionManager : MonoBehaviour
 		   
 		   if (selection.CompareTag(selectableTag) && Input.GetKeyDown(KeyCode.F))
 		   {
-			 DrunkScript.enabled = true;
+			 DrunkTimer.enabled = true;
 			 print("key was pressed");
+			 Kalja.gameObject.SetActive(false);
 		   }
 			
 		   if (selection.CompareTag(selectableTag))
