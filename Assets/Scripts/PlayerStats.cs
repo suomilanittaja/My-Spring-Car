@@ -28,6 +28,8 @@ public class PlayerStats : MonoBehaviour
 	public float sprintSpeed = 5f;
 	
 	public GameObject Die;
+	public GameObject Player;
+	public GameObject Camera;
 	
 	private void Start()
 	{
@@ -44,7 +46,10 @@ public class PlayerStats : MonoBehaviour
 		CalculateValues();
 		if (Health <= 0.1f)
 		{
+			Camera.gameObject.SetActive(true);
 			Die.gameObject.SetActive(true);
+			Player.gameObject.SetActive(false);
+			Cursor.lockState = CursorLockMode.Confined;
 		}
 	}
 		
