@@ -14,7 +14,7 @@ public class DrunkTimer : MonoBehaviour
     IEnumerator DoSomething()
     {
          DrunkScript.enabled = true;
-         yield return new WaitForSeconds(10);
+         yield return new WaitForSeconds(60);
          DrunkScript.enabled = false;
 	}
 }
