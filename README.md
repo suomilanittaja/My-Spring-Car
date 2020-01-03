@@ -6,10 +6,12 @@ Features
 Eating  
 Drinking beer  
 Stamina  
-Health (alpha)  
-Hunger (alpha)  
-Thirst (alpha)  
-pick up  
+Health   
+Hunger  
+Thirst  
+Pick Up  
+Main Menu  
+Die Screen  
 
 To-Do  
 Improve Jumping  
