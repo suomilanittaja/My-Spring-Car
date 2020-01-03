@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Beer
+  - Food
   layers:
   - Default
   - TransparentFX

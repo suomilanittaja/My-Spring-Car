@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SelectionManager : MonoBehaviour
+public class Eat : MonoBehaviour
 {
    [SerializeField] private Material highlightMaterial;
    [SerializeField] private string selectableTag = "Selectable";
    [SerializeField] private Material defaultMaterial;
    public GameObject Text;
-   public DrunkTimer DrunkTimer;
-   public GameObject Beer;
+   public GameObject Food;
    private Transform _selection;
    
    public PlayerStats stats;
@@ -37,13 +36,12 @@ public class SelectionManager : MonoBehaviour
 	   if (Physics.Raycast(ray, out hit))
 	   {
 		   var selection = hit.transform;
-		   Beer = hit.collider.gameObject;
+		   Food = hit.collider.gameObject;
 		   if (selection.CompareTag(selectableTag) && Input.GetKeyDown(KeyCode.F))
 		   {
-			 stats.Drink();
-			 DrunkTimer.enabled = true;
+			 stats.Eat();
 			 print("key was pressed");
-			 Beer.gameObject.SetActive(false);
+			 Food.gameObject.SetActive(false);
 		   }
 			
 		   if (selection.CompareTag(selectableTag))
