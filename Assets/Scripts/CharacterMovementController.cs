@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterMovementController : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class CharacterMovementController : MonoBehaviour
     private float _gravity = -10f;
 
     private float _yAxisVelocity;
+	
+	
+
 
     private void Update()
     {

@@ -12,6 +12,8 @@ public class SelectionManager : MonoBehaviour
    public GameObject Beer;
    private Transform _selection;
    
+   public PlayerStats stats;
+   
    private void Update()
    {
 	   
@@ -38,6 +40,7 @@ public class SelectionManager : MonoBehaviour
 		   Beer = hit.collider.gameObject;
 		   if (selection.CompareTag(selectableTag) && Input.GetKeyDown(KeyCode.F))
 		   {
+			 stats.Drink();
 			 DrunkTimer.enabled = true;
 			 print("key was pressed");
 			 Beer.gameObject.SetActive(false);
