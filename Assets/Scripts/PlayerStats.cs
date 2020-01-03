@@ -117,11 +117,13 @@ public class PlayerStats : MonoBehaviour
 		Stamina = Mathf.Clamp(Stamina, 0, 100f);
 		Hunger = Mathf.Clamp(Hunger, 0, 100f);
 		Thirst = Mathf.Clamp(Thirst, 0, 100f);
+		Drunk = Mathf.Clamp(Drunk, 0, 100f);
 		
 		HealthBar.value = Health;
 		StaminaBar.value = Stamina;
 		HungerBar.value = Hunger;
 		ThirstBar.value = Thirst;
+		DrunkBar.value = Drunk;
 	}
 	
 	public void TakeDamage(float amnt)
