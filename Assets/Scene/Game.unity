@@ -849,7 +849,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 5512773010151134228}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 306895548}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6dfaddf6d2b3b3b4cb0c2041edf7805d, type: 3}
@@ -3716,6 +3716,25 @@ RectTransform:
   m_AnchoredPosition: {x: -203.4, y: 93.2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &306895548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5512773009300997987, guid: ef14b662b79bc2a48a40267fa494064b,
+    type: 3}
+  m_PrefabInstance: {fileID: 5512773010151134228}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &306895551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306895548}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f2e1a1ccf93f894e870ad1d5fcb72b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: b237c528b32666f47ac36e11c31ff133, type: 2}
 --- !u!1 &308122099
 GameObject:
   m_ObjectHideFlags: 0
@@ -3982,15 +4001,20 @@ MonoBehaviour:
   hungerOverTime: 0.1
   Thirst: 100
   thirstOverTime: 0.1
+  Drunk: 0
+  drunkOverTime: 2
   HealthBar: {fileID: 1377203849}
   StaminaBar: {fileID: 1360718516}
   HungerBar: {fileID: 2113304044}
   ThirstBar: {fileID: 1275347346}
+  DrunkBar: {fileID: 0}
   minAmount: 5
   sprintSpeed: 5
   Die: {fileID: 1834889160}
   Player: {fileID: 341231561}
   Camera: {fileID: 1048617463}
+  DrunkScript: {fileID: 1473516412}
+  DrunkScript2: {fileID: 306895551}
 --- !u!1 &344355967
 GameObject:
   m_ObjectHideFlags: 0
@@ -6154,7 +6178,6 @@ GameObject:
   m_Component:
   - component: {fileID: 523147286}
   - component: {fileID: 523147285}
-  - component: {fileID: 523147287}
   - component: {fileID: 523147288}
   m_Layer: 0
   m_Name: Manager
@@ -6175,11 +6198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26a2754b7f81c4a4ab0874945b2c41ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightMaterial: {fileID: 2100000, guid: 9a8501ae1327cfb449f0a0fd427e8743, type: 2}
   selectableTag: Beer
-  defaultMaterial: {fileID: 2100000, guid: 04ff60ac766684243b4faf6f6f20fbca, type: 2}
   Text: {fileID: 433331489}
-  DrunkTimer: {fileID: 523147287}
   Beer: {fileID: 0}
   stats: {fileID: 341231562}
 --- !u!4 &523147286
@@ -6196,19 +6216,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &523147287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 523147284}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caf08a664c0cb8d46a03d8fb8cbfcdc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DrunkScript: {fileID: 1473516412}
 --- !u!114 &523147288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6221,9 +6228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68bf54f9144b67c489e4ca03c047c655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightMaterial: {fileID: 2100000, guid: 9a8501ae1327cfb449f0a0fd427e8743, type: 2}
   selectableTag: Food
-  defaultMaterial: {fileID: 2100000, guid: fcd2653200c391649bca325abb427a32, type: 2}
   Text: {fileID: 587551906}
   Food: {fileID: 0}
   stats: {fileID: 341231562}
@@ -17035,7 +17040,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 5512773010151134228}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 306895548}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b8ab59b8050ac54eb83348978062c45, type: 3}
@@ -24960,6 +24965,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5512773009300997992, guid: ef14b662b79bc2a48a40267fa494064b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5512773010349462488, guid: ef14b662b79bc2a48a40267fa494064b,
         type: 3}
       propertyPath: m_LocalPosition.x

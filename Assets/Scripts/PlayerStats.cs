@@ -18,11 +18,15 @@ public class PlayerStats : MonoBehaviour
 	public float Thirst;
 	public float thirstOverTime;
 	
+	public float Drunk;
+	public float drunkOverTime;
+	
 	
 	public Slider HealthBar;
 	public Slider StaminaBar;
 	public Slider HungerBar;
 	public Slider ThirstBar;
+	public Slider DrunkBar;
 	
 	public float minAmount = 0.1f;
 	public float sprintSpeed = 5f;
@@ -30,6 +34,8 @@ public class PlayerStats : MonoBehaviour
 	public GameObject Die;
 	public GameObject Player;
 	public GameObject Camera;
+	public Drunk DrunkScript;
+	public Drunk2 DrunkScript2;
 	
 	private void Start()
 	{
@@ -37,6 +43,7 @@ public class PlayerStats : MonoBehaviour
 		StaminaBar.maxValue = Stamina;
 		HungerBar.maxValue = Hunger;
 		ThirstBar.maxValue = Thirst;
+		DrunkBar.maxValue = Drunk;
 		
 		updateUI();
 	}	
@@ -58,6 +65,26 @@ public class PlayerStats : MonoBehaviour
 		Hunger -= hungerOverTime * Time.deltaTime;
 		Thirst -= thirstOverTime * Time.deltaTime;
 		
+		if(Drunk <= 0)
+		{
+			DrunkScript.enabled = false;
+		}
+		else
+		{
+			if(Drunk >= 0)
+			{
+				DrunkScript.enabled = true;
+				DrunkScript2.enabled = false;
+				if(Drunk >= 50)
+				{
+					DrunkScript2.enabled = true;
+					DrunkScript.enabled = false;
+				}
+			}
+			Drunk -= drunkOverTime * Time.deltaTime;
+			
+		}
+				
 		if(Hunger <= minAmount || Thirst <= minAmount)
 		{
 			Health -= healthOverTimer * Time.deltaTime;
@@ -106,6 +133,7 @@ public class PlayerStats : MonoBehaviour
 	public void Drink()
 	{
 		Thirst += 20;
+		Drunk += 20;
 	}
 	
 	public void Eat()

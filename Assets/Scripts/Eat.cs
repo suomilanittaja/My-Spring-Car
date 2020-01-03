@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Eat : MonoBehaviour
 {
-   [SerializeField] private Material highlightMaterial;
    [SerializeField] private string selectableTag = "Selectable";
-   [SerializeField] private Material defaultMaterial;
    public GameObject Text;
    public GameObject Food;
    private Transform _selection;
@@ -20,8 +18,6 @@ public class Eat : MonoBehaviour
 	   //Check if ray dont touch it anymore
 	   if (_selection != null)
 	   {
-		   var selectionRenderer = _selection.GetComponent<Renderer>();
-		   selectionRenderer.material = defaultMaterial;
 		   _selection = null;
 		   Text.gameObject.SetActive(false);
 	   }
@@ -46,15 +42,7 @@ public class Eat : MonoBehaviour
 			
 		   if (selection.CompareTag(selectableTag))
 		   {
-			    var selectionRenderer = selection.GetComponent<Renderer>();
 				Text.gameObject.SetActive(true);
-				
-				
-				if (selectionRenderer != null)
-				{
-					selectionRenderer.material = highlightMaterial;
-					
-				}
 				_selection = selection;
 		   }
   
