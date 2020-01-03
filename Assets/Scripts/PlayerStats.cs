@@ -10,6 +10,7 @@ public class PlayerStats : MonoBehaviour
 	
 	public float Stamina;
 	public float staminaOverTime;
+	public float staminaOverTime2;
 	
 	public float Hunger;
 	public float hungerOverTime;
@@ -55,16 +56,16 @@ public class PlayerStats : MonoBehaviour
 			Stamina -= staminaOverTime * Time.deltaTime;
 		}
 		
-		//if(myBody.velocity.magnitude>=sprintSpeed && myBody.velocity.y == 0)
-		//{
-		//	Stamina -= staminaOverTime * Time.deltaTime;
-		//	Hunger -= hungerOverTime * Time.deltaTime;
-		//	Thirst -= thirstOverTime * Time.deltaTime;
-		//}
-		//else
-		//{
-		//	Stamina += staminaOverTime * Time.deltaTime;
-		//}
+		if(Input.GetKey(KeyCode.LeftShift))
+		{
+			Stamina -= staminaOverTime * Time.deltaTime;
+			Hunger -= hungerOverTime * Time.deltaTime;
+			Thirst -= thirstOverTime * Time.deltaTime;
+		}
+		else
+		{
+			Stamina += staminaOverTime2 * Time.deltaTime;
+		}
 		
 		if(Health <= 0)
 		{

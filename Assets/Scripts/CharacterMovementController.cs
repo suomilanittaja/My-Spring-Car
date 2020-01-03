@@ -15,16 +15,26 @@ public class CharacterMovementController : MonoBehaviour
 
     private float _yAxisVelocity;
 	
+	public Slider stamina;
 	
+	public float value2;
+	
+	
+	public void Start()
+	{
+		
+	}
 
 
     private void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
+		value2 = stamina.value;
+		
+		float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        if (Input.GetKey(KeyCode.LeftShift))
-            vertical *= sprintSpeedMultiplier;
+        if (Input.GetKey(KeyCode.LeftShift) && value2 >= 5f)
+			vertical *= sprintSpeedMultiplier;
         
         Vector3 movement = horizontal * moveSpeed * Time.deltaTime * transform.right +
                            vertical * moveSpeed * Time.deltaTime * transform.forward;

@@ -521,7 +521,8 @@ MonoBehaviour:
   Health: 100
   healthOverTimer: 1
   Stamina: 100
-  staminaOverTime: 2
+  staminaOverTime: 10
+  staminaOverTime2: 4
   Hunger: 100
   hungerOverTime: 1
   Thirst: 100
@@ -2914,6 +2915,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5512773010349462495, guid: ef14b662b79bc2a48a40267fa494064b,
+        type: 3}
+      propertyPath: stats
+      value: 
+      objectReference: {fileID: 341231562}
+    - target: {fileID: 5512773010349462495, guid: ef14b662b79bc2a48a40267fa494064b,
+        type: 3}
+      propertyPath: stamina
+      value: 
+      objectReference: {fileID: 1360718516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef14b662b79bc2a48a40267fa494064b, type: 3}
 --- !u!1001 &5840842919595000300
