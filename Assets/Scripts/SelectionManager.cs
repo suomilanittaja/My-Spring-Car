@@ -33,6 +33,7 @@ public class SelectionManager : MonoBehaviour
 	   if (Physics.Raycast(ray, out hit))
 	   {
 		   var selection = hit.transform;
+		   Kalja = hit.collider.gameObject;
 		   
 		   if (selection.CompareTag(selectableTag) && Input.GetKeyDown(KeyCode.F))
 		   {
