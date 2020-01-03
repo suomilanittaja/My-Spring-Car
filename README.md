@@ -8,4 +8,4 @@ Map
 Add RoadArchive
 
 Vehicle Model  
-<a href="https://www.blender-models.com/model-downloads/vehicles/land-based/id/lada-1111-oka/">lada 1111 oka 3D Model</a>
+
