@@ -8,6 +8,7 @@ public class PickUp : MonoBehaviour
 	
 	void OnMouseDown()
 	{
+		GetComponent<BoxCollider>().enabled = false;
 		GetComponent<Rigidbody>().useGravity = false;
 		this.transform.position = theDest.position;
 		this.transform.parent = GameObject.Find("Destination").transform;
@@ -17,6 +18,7 @@ public class PickUp : MonoBehaviour
 	{
 		this.transform.parent = null;
 		GetComponent<Rigidbody>().useGravity = true;
+		GetComponent<BoxCollider>().enabled = true;
 	}
 }
 
