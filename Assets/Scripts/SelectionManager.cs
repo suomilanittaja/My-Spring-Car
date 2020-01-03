@@ -9,11 +9,12 @@ public class SelectionManager : MonoBehaviour
    [SerializeField] private Material defaultMaterial;
    public GameObject Text;
    public DrunkTimer DrunkTimer;
-   public GameObject Kalja;
+   public GameObject Beer;
    private Transform _selection;
    
    private void Update()
    {
+	   
 	   
 	   //Check if ray dont touch it anymore
 	   if (_selection != null)
@@ -27,19 +28,19 @@ public class SelectionManager : MonoBehaviour
 	   //Creating a Ray
 	   var ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width/2f, Screen.height/2f, 0f));
 	   RaycastHit hit;
+	   
 
 		
 	   //Check if ray touch it 
 	   if (Physics.Raycast(ray, out hit))
 	   {
 		   var selection = hit.transform;
-		   Kalja = hit.collider.gameObject;
-		   
+		   Beer = hit.collider.gameObject;
 		   if (selection.CompareTag(selectableTag) && Input.GetKeyDown(KeyCode.F))
 		   {
 			 DrunkTimer.enabled = true;
 			 print("key was pressed");
-			 Kalja.gameObject.SetActive(false);
+			 Beer.gameObject.SetActive(false);
 		   }
 			
 		   if (selection.CompareTag(selectableTag))
