@@ -12,6 +12,7 @@ Thirst
 Pick Up  
 Main Menu  
 Die Screen  
+Pause Menu; https://github.com/GreatArcStudios/unitypausemenu  
 
 To-Do  
 Improve Jumping  
