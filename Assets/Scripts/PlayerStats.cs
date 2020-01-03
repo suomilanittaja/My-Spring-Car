@@ -24,14 +24,13 @@ public class PlayerStats : MonoBehaviour
 	public Slider HungerBar;
 	public Slider ThirstBar;
 	
-	public float minAmount = 5f;
+	public float minAmount = 0.1f;
 	public float sprintSpeed = 5f;
 	
-	//Rigidbody myBody;
+	public GameObject Die;
 	
 	private void Start()
 	{
-		//myBody = GetComponent<Rigidbody>();
 		HealthBar.maxValue = Health;
 		StaminaBar.maxValue = Stamina;
 		HungerBar.maxValue = Hunger;
@@ -43,6 +42,10 @@ public class PlayerStats : MonoBehaviour
 	private void Update()
 	{
 		CalculateValues();
+		if (Health <= 0.1f)
+		{
+			Die.gameObject.SetActive(true);
+		}
 	}
 		
 	private void CalculateValues()
