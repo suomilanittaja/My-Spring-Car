@@ -24,10 +24,15 @@ public class CharacterCameraController : MonoBehaviour
         
         characterBase.Rotate(x * lookSpeed * Time.deltaTime * 10f * Vector3.up);
         
-        if(Input.GetMouseButton(0))
-            Cursor.lockState = CursorLockMode.Locked;
+        //if(Input.GetMouseButton(0))
+           // Cursor.lockState = CursorLockMode.Locked;
         
         if(Input.GetKeyDown(KeyCode.Escape))
             Cursor.lockState = CursorLockMode.Confined;
     }
+	
+	public void Cursor3()
+	{
+		Cursor.lockState = CursorLockMode.Locked;
+	}
 }
