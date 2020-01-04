@@ -6,6 +6,7 @@ public class PickUp : MonoBehaviour
 {
 	public Transform theDest;
 	
+
 	void OnMouseDown()
 	{
 		
