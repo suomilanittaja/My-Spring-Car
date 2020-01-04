@@ -12,6 +12,7 @@ public class Shop : MonoBehaviour
    public Money money; 
    public int money2;
    public Drink drink;
+   public Eat eat;
    
    private void Update()
    {
@@ -45,8 +46,18 @@ public class Shop : MonoBehaviour
 				StartCoroutine(Time());
 				 
 		   }
+		   if (selection.CompareTag(Item2) && Input.GetKeyDown(KeyCode.F) && money2 >= 20)
+		   {
+				money.money -= 20;
+				Vector3 position = Buyed;
+				Item.transform.position = position;
+				eat.enabled = false;
+				Item.tag = "Food";
+				StartCoroutine(Time());
+				 
+		   }
 			
-		   if (selection.CompareTag(Item1))
+		   if (selection.CompareTag(Item1) | selection.CompareTag(Item2))
 		   {  
 				Text.gameObject.SetActive(true);
 				_selection = selection;
@@ -59,6 +70,7 @@ public class Shop : MonoBehaviour
 			
 		yield return new WaitForSeconds(1);
 		drink.enabled = true;
+		eat.enabled = true;
 	}
    
 }
