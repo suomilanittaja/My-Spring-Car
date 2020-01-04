@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Beer
   - Food
+  - BuyItem
   layers:
   - Default
   - TransparentFX
