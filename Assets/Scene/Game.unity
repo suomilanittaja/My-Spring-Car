@@ -703,6 +703,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 659335273}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: theDest
+      value: 
+      objectReference: {fileID: 1083602577}
     - target: {fileID: 5215788230329061466, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
         type: 3}
       propertyPath: m_Name
@@ -713,11 +717,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: BuyItem
       objectReference: {fileID: 0}
-    - target: {fileID: 5215788230329061467, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
-        type: 3}
-      propertyPath: theDest
-      value: 
-      objectReference: {fileID: 1083602577}
     - target: {fileID: 9095417583359468105, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -789,7 +788,7 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 5215788230329061467, guid: 8758a76c1c8ef174aa5ef5246ab3abd8, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8758a76c1c8ef174aa5ef5246ab3abd8, type: 3}
 --- !u!4 &42619409 stripped
 Transform:
@@ -1668,16 +1667,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 406279024}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: theDest
+      value: 
+      objectReference: {fileID: 1083602577}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5215788230329061466, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
         type: 3}
       propertyPath: m_Name
       value: Beer
       objectReference: {fileID: 0}
-    - target: {fileID: 5215788230329061467, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
-        type: 3}
-      propertyPath: theDest
-      value: 
-      objectReference: {fileID: 1083602577}
     - target: {fileID: 9095417583359468105, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1748,7 +1750,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8758a76c1c8ef174aa5ef5246ab3abd8, type: 3}
 --- !u!1 &101994828
 GameObject:
@@ -3552,16 +3555,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 406279024}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: theDest
+      value: 
+      objectReference: {fileID: 1083602577}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5215788230329061466, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
         type: 3}
       propertyPath: m_Name
       value: Beer
       objectReference: {fileID: 0}
-    - target: {fileID: 5215788230329061467, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
-        type: 3}
-      propertyPath: theDest
-      value: 
-      objectReference: {fileID: 1083602577}
     - target: {fileID: 9095417583359468105, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3632,7 +3638,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8758a76c1c8ef174aa5ef5246ab3abd8, type: 3}
 --- !u!1 &232705506
 GameObject:
@@ -3903,11 +3910,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2117606240}
     m_Modifications:
-    - target: {fileID: 145211495677052961, guid: 79b25156a5a960c4fb04a3d18ae8aae4,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: theDest
       value: 
       objectReference: {fileID: 1083602577}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2047452428937490760, guid: 79b25156a5a960c4fb04a3d18ae8aae4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3989,6 +3999,7 @@ PrefabInstance:
       value: Food
       objectReference: {fileID: 0}
     m_RemovedComponents:
+    - {fileID: 0}
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 79b25156a5a960c4fb04a3d18ae8aae4, type: 3}
 --- !u!4 &252369058 stripped
@@ -7130,6 +7141,7 @@ GameObject:
   - component: {fileID: 523147285}
   - component: {fileID: 523147288}
   - component: {fileID: 523147287}
+  - component: {fileID: 523147289}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -7197,6 +7209,25 @@ MonoBehaviour:
   stats: {fileID: 341231562}
   Text: {fileID: 587551906}
   Food: {fileID: 0}
+--- !u!114 &523147289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523147284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f404fb8f054cf458e64b4f0606a4f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectableTag: Beer
+  selectableTag2: Food
+  Text: {fileID: 0}
+  PickUP: {fileID: 0}
+  theDest: {fileID: 1083602577}
+  picked: 0
+  lastPick: {fileID: 0}
 --- !u!1 &527284734
 GameObject:
   m_ObjectHideFlags: 0
@@ -14460,8 +14491,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1616296850}
     m_Modifications:
-    - target: {fileID: 145211495677052961, guid: 79b25156a5a960c4fb04a3d18ae8aae4,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: theDest
       value: 
       objectReference: {fileID: 1083602577}
@@ -18606,6 +18636,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 659335273}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: theDest
+      value: 
+      objectReference: {fileID: 1083602577}
     - target: {fileID: 5215788230329061466, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
         type: 3}
       propertyPath: m_Name
@@ -18616,11 +18650,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: BuyItem
       objectReference: {fileID: 0}
-    - target: {fileID: 5215788230329061467, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
-        type: 3}
-      propertyPath: theDest
-      value: 
-      objectReference: {fileID: 1083602577}
     - target: {fileID: 9095417583359468105, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18692,7 +18721,7 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 5215788230329061467, guid: 8758a76c1c8ef174aa5ef5246ab3abd8, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8758a76c1c8ef174aa5ef5246ab3abd8, type: 3}
 --- !u!4 &1466962060 stripped
 Transform:
@@ -19309,11 +19338,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2117606240}
     m_Modifications:
-    - target: {fileID: 145211495677052961, guid: 79b25156a5a960c4fb04a3d18ae8aae4,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: theDest
       value: 
       objectReference: {fileID: 1083602577}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2047452428937490760, guid: 79b25156a5a960c4fb04a3d18ae8aae4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19395,6 +19427,7 @@ PrefabInstance:
       value: Food
       objectReference: {fileID: 0}
     m_RemovedComponents:
+    - {fileID: 0}
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 79b25156a5a960c4fb04a3d18ae8aae4, type: 3}
 --- !u!4 &1486784338 stripped
@@ -20052,16 +20085,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 406279024}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: theDest
+      value: 
+      objectReference: {fileID: 1083602577}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5215788230329061466, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
         type: 3}
       propertyPath: m_Name
       value: Beer
       objectReference: {fileID: 0}
-    - target: {fileID: 5215788230329061467, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
-        type: 3}
-      propertyPath: theDest
-      value: 
-      objectReference: {fileID: 1083602577}
     - target: {fileID: 9095417583359468105, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20132,7 +20168,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8758a76c1c8ef174aa5ef5246ab3abd8, type: 3}
 --- !u!4 &1550028500 stripped
 Transform:
@@ -20570,6 +20607,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 659335273}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: theDest
+      value: 
+      objectReference: {fileID: 1083602577}
     - target: {fileID: 5215788230329061466, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
         type: 3}
       propertyPath: m_Name
@@ -20580,11 +20621,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: BuyItem
       objectReference: {fileID: 0}
-    - target: {fileID: 5215788230329061467, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
-        type: 3}
-      propertyPath: theDest
-      value: 
-      objectReference: {fileID: 1083602577}
     - target: {fileID: 9095417583359468105, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20656,7 +20692,7 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 5215788230329061467, guid: 8758a76c1c8ef174aa5ef5246ab3abd8, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8758a76c1c8ef174aa5ef5246ab3abd8, type: 3}
 --- !u!4 &1578521485 stripped
 Transform:
@@ -23766,6 +23802,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 659335273}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: pick.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: theDest
+      value: 
+      objectReference: {fileID: 1083602577}
     - target: {fileID: 5215788230329061466, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
         type: 3}
       propertyPath: m_Name
@@ -23776,16 +23820,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: BuyItem
       objectReference: {fileID: 0}
-    - target: {fileID: 5215788230329061467, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
-        type: 3}
-      propertyPath: pick.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5215788230329061467, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
-        type: 3}
-      propertyPath: theDest
-      value: 
-      objectReference: {fileID: 1083602577}
     - target: {fileID: 9095417583359468105, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23857,7 +23891,7 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 5215788230329061467, guid: 8758a76c1c8ef174aa5ef5246ab3abd8, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8758a76c1c8ef174aa5ef5246ab3abd8, type: 3}
 --- !u!4 &1803234076 stripped
 Transform:
@@ -24116,8 +24150,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1616296850}
     m_Modifications:
-    - target: {fileID: 145211495677052961, guid: 79b25156a5a960c4fb04a3d18ae8aae4,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: theDest
       value: 
       objectReference: {fileID: 1083602577}
@@ -26116,11 +26149,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2117606240}
     m_Modifications:
-    - target: {fileID: 145211495677052961, guid: 79b25156a5a960c4fb04a3d18ae8aae4,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: theDest
       value: 
       objectReference: {fileID: 1083602577}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2047452428937490760, guid: 79b25156a5a960c4fb04a3d18ae8aae4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26202,6 +26238,7 @@ PrefabInstance:
       value: Food
       objectReference: {fileID: 0}
     m_RemovedComponents:
+    - {fileID: 0}
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 79b25156a5a960c4fb04a3d18ae8aae4, type: 3}
 --- !u!4 &2012734069 stripped
@@ -26969,8 +27006,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1616296850}
     m_Modifications:
-    - target: {fileID: 145211495677052961, guid: 79b25156a5a960c4fb04a3d18ae8aae4,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: theDest
       value: 
       objectReference: {fileID: 1083602577}
@@ -27176,8 +27212,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1616296850}
     m_Modifications:
-    - target: {fileID: 145211495677052961, guid: 79b25156a5a960c4fb04a3d18ae8aae4,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: theDest
       value: 
       objectReference: {fileID: 1083602577}
@@ -28391,11 +28426,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2117606240}
     m_Modifications:
-    - target: {fileID: 145211495677052961, guid: 79b25156a5a960c4fb04a3d18ae8aae4,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: theDest
       value: 
       objectReference: {fileID: 1083602577}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2047452428937490760, guid: 79b25156a5a960c4fb04a3d18ae8aae4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28478,6 +28516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 79b25156a5a960c4fb04a3d18ae8aae4, type: 3}
 --- !u!1001 &8856854970086141424
 PrefabInstance:
@@ -28486,21 +28525,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 406279024}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: pick.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: theDest
+      value: 
+      objectReference: {fileID: 1083602577}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5215788230329061466, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
         type: 3}
       propertyPath: m_Name
       value: Beer
       objectReference: {fileID: 0}
-    - target: {fileID: 5215788230329061467, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
-        type: 3}
-      propertyPath: pick.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5215788230329061467, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
-        type: 3}
-      propertyPath: theDest
-      value: 
-      objectReference: {fileID: 1083602577}
     - target: {fileID: 9095417583359468105, guid: 8758a76c1c8ef174aa5ef5246ab3abd8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28571,5 +28612,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8758a76c1c8ef174aa5ef5246ab3abd8, type: 3}

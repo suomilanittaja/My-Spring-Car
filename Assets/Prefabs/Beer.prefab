@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 5215788230329061469}
   - component: {fileID: 5215788230329061470}
   - component: {fileID: 5215788230329061471}
-  - component: {fileID: 5215788230329061467}
   m_Layer: 0
-  m_Name: Beer 1
+  m_Name: Beer
   m_TagString: Beer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,16 +110,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5215788230329061467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5215788230329061466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23f404fb8f054cf458e64b4f0606a4f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  theDest: {fileID: 0}

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5495826913194201794}
   - component: {fileID: 2773937904731607201}
   - component: {fileID: 3778227024185610232}
-  - component: {fileID: 145211495677052961}
   - component: {fileID: -6060693524122851228}
   m_Layer: 0
   m_Name: Food
@@ -97,19 +96,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &145211495677052961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3040311253487747931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23f404fb8f054cf458e64b4f0606a4f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  theDest: {fileID: 0}
 --- !u!65 &-6060693524122851228
 BoxCollider:
   m_ObjectHideFlags: 0
