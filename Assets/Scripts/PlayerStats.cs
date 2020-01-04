@@ -31,7 +31,7 @@ public class PlayerStats : MonoBehaviour
 	public float minAmount = 0.1f;
 	public float sprintSpeed = 5f;
 	
-	public GameObject Die;
+	public GameObject Died;
 	public GameObject Player;
 	public GameObject Camera;
 	public Drunk DrunkScript;
@@ -54,7 +54,7 @@ public class PlayerStats : MonoBehaviour
 		if (Health <= 0.1f)
 		{
 			Camera.gameObject.SetActive(true);
-			Die.gameObject.SetActive(true);
+			Died.gameObject.SetActive(true);
 			Player.gameObject.SetActive(false);
 			Cursor.lockState = CursorLockMode.Confined;
 		}

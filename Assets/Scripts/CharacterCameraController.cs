@@ -23,10 +23,7 @@ public class CharacterCameraController : MonoBehaviour
         transform.localRotation = Quaternion.Euler(_camRotation , 0f ,0f);
         
         characterBase.Rotate(x * lookSpeed * Time.deltaTime * 10f * Vector3.up);
-        
-        //if(Input.GetMouseButton(0))
-           // Cursor.lockState = CursorLockMode.Locked;
-        
+             
         if(Input.GetKeyDown(KeyCode.Escape))
             Cursor.lockState = CursorLockMode.Confined;
     }

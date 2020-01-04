@@ -5,16 +5,17 @@ using UnityEngine;
 public class Eat : MonoBehaviour
 {
    [SerializeField] private string selectableTag = "Selectable";
-   public GameObject Text;
-   public GameObject Food;
+
    private Transform _selection;
    
    public PlayerStats stats;
    
+   public GameObject Text;
+   public GameObject Food;
+   
    private void Update()
    {
-	   
-	   
+	      
 	   //Check if ray dont touch it anymore
 	   if (_selection != null)
 	   {
@@ -25,9 +26,7 @@ public class Eat : MonoBehaviour
 	   //Creating a Ray
 	   var ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width/2f, Screen.height/2f, 0f));
 	   RaycastHit hit;
-	   
-
-		
+	   	
 	   //Check if ray touch it 
 	   if (Physics.Raycast(ray, out hit))
 	   {
@@ -45,8 +44,6 @@ public class Eat : MonoBehaviour
 				Text.gameObject.SetActive(true);
 				_selection = selection;
 		   }
-  
 	   }
    }
-   
 }

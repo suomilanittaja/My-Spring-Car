@@ -5,17 +5,18 @@ using UnityEngine;
 public class Drink : MonoBehaviour
 {
    [SerializeField] private string selectableTag = "Selectable";
-   public GameObject Text;
-   public GameObject Beer;
+
    private Transform _selection;
    
    public PlayerStats stats;
+   
+   public GameObject Text;
+   public GameObject Beer;
    
 	
 
    private void Update()
    {
-	   
 	   
 	   //Check if ray dont touch it anymore
 	   if (_selection != null)
@@ -46,11 +47,6 @@ public class Drink : MonoBehaviour
 				Text.gameObject.SetActive(true);
 				_selection = selection;
 		   }
-  
 	   }
-   }
-   
-
-   
-   
+   }  
 }

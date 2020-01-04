@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class CharacterMovementController : MonoBehaviour
 {
@@ -19,10 +20,12 @@ public class CharacterMovementController : MonoBehaviour
 	
 	public float value2;
 	
+	public bool canJump;
+	
 	
 	public void Start()
 	{
-		
+		canJump = true;
 	}
 
 
@@ -43,12 +46,23 @@ public class CharacterMovementController : MonoBehaviour
             _yAxisVelocity = -0.5f;
 
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && canJump == true)
+		{
             _yAxisVelocity = Mathf.Sqrt(jumpHeight * -2f * _gravity);
+			canJump = false;
+			StartCoroutine(Time2());
+			
+		}
 
         _yAxisVelocity += _gravity * Time.deltaTime;
         movement.y = _yAxisVelocity * Time.deltaTime;
         
         characterController.Move(movement);
     }
+	
+	IEnumerator Time2()
+	{	
+		yield return new WaitForSeconds(1);
+		canJump = true;
+	}
 }
