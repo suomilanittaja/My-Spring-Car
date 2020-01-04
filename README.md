@@ -12,12 +12,13 @@ Thirst
 Pick Up  
 Main Menu  
 Die Screen  
+Shop  
+Money  
 Pause Menu; https://github.com/GreatArcStudios/unitypausemenu  
+ETC...  
 
 To-Do  
-Improve Jumping  
-More models  
-Map  
-Add RoadArchive  
+More 3Dmodels  
+Map     
 Vehicle Model  
 
