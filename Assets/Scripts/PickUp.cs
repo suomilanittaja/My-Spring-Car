@@ -6,6 +6,7 @@ public class PickUp : MonoBehaviour
 {
 	[SerializeField] private string selectableTag = "Selectable";
 	[SerializeField] private string selectableTag2 = "Selectable";
+	[SerializeField] private string selectableTag3 = "Selectable";
 	
 
 	private Transform _selection;
@@ -54,6 +55,13 @@ public class PickUp : MonoBehaviour
 			 print("key was pressed");
 		   }
 		   
+		   if (selection.CompareTag(selectableTag3) && Input.GetMouseButtonDown(0) && picked == false && hitDis <= 3)
+		   {
+			 lastPick = hit.collider.gameObject;
+			 MouseDown();
+			 print("key was pressed");
+		   }
+		   
 		   
 		   if (Input.GetMouseButtonUp(0))
 		   {
@@ -62,7 +70,7 @@ public class PickUp : MonoBehaviour
 		   }
 		   
 			
-		   if (selection.CompareTag(selectableTag) | selection.CompareTag(selectableTag2)  && hitDis <= 3)
+		   if (selection.CompareTag(selectableTag) | selection.CompareTag(selectableTag2) | selection.CompareTag(selectableTag3) && hitDis <= 3)
 		   {  
 				_selection = selection;
 		   }
@@ -81,10 +89,10 @@ public class PickUp : MonoBehaviour
 	
 	void MouseUp()
 	{
+		picked = false;
 		lastPick.GetComponent<Rigidbody>().isKinematic = false;
 		lastPick.transform.parent = null;
-		lastPick.GetComponent<Rigidbody>().useGravity = true;
-		picked = false;
+		lastPick.GetComponent<Rigidbody>().useGravity = true;	
 	}
 }
 
