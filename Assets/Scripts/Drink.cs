@@ -9,7 +9,6 @@ public class Drink : MonoBehaviour
    private Transform _selection;
    
    public PlayerStats stats;
-   
    public GameObject Text;
    public GameObject Beer;
    public float hitDis;

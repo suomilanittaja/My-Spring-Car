@@ -72,7 +72,7 @@ public class PickUp : MonoBehaviour
 
 	void MouseDown()
 	{
-		
+		PickUP.GetComponent<Rigidbody>().isKinematic = true;
 		PickUP.GetComponent<Rigidbody>().useGravity = false;
 		PickUP.transform.position = theDest.position;
 		PickUP.transform.parent = GameObject.Find("Destination").transform;
@@ -81,6 +81,7 @@ public class PickUp : MonoBehaviour
 	
 	void MouseUp()
 	{
+		lastPick.GetComponent<Rigidbody>().isKinematic = false;
 		lastPick.transform.parent = null;
 		lastPick.GetComponent<Rigidbody>().useGravity = true;
 		picked = false;
