@@ -12,7 +12,7 @@ public class Drink : MonoBehaviour
    
    public GameObject Text;
    public GameObject Beer;
-   
+   public float hitDis;
 	
 
    private void Update()
@@ -33,16 +33,17 @@ public class Drink : MonoBehaviour
 	   //Check if ray touch it 
 	   if (Physics.Raycast(ray, out hit))
 	   {
+		   hitDis = hit.distance;
 		   var selection = hit.transform;
 		   Beer = hit.collider.gameObject;
-		   if (selection.CompareTag(selectableTag) && Input.GetKeyDown(KeyCode.F))
+		   if (selection.CompareTag(selectableTag) && Input.GetKeyDown(KeyCode.F) && hitDis <= 3)
 		   {
 			 stats.Drink();
 			 print("key was pressed");
 			 Beer.gameObject.SetActive(false);
 		   }
 			
-		   if (selection.CompareTag(selectableTag))
+		   if (selection.CompareTag(selectableTag)  && hitDis <= 3)
 		   {  
 				Text.gameObject.SetActive(true);
 				_selection = selection;

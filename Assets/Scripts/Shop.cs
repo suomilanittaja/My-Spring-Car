@@ -13,6 +13,7 @@ public class Shop : MonoBehaviour
    public int money2;
    public Drink drink;
    public Eat eat;
+   public float hitDis;
    
    private void Update()
    {
@@ -33,10 +34,11 @@ public class Shop : MonoBehaviour
 	   //Check if ray touch it 
 	   if (Physics.Raycast(ray, out hit))
 	   {
+		   hitDis = hit.distance;
 		   var selection = hit.transform;
 		   Item = hit.collider.gameObject;
 		   
-		   if (selection.CompareTag(Item1) && Input.GetKeyDown(KeyCode.F) && money2 >= 10)
+		   if (selection.CompareTag(Item1) && Input.GetKeyDown(KeyCode.F) && money2 >= 10 && hitDis <= 3)
 		   {
 				money.money -= 10;
 				Vector3 position = Buyed;
@@ -46,7 +48,7 @@ public class Shop : MonoBehaviour
 				StartCoroutine(Time());
 				 
 		   }
-		   if (selection.CompareTag(Item2) && Input.GetKeyDown(KeyCode.F) && money2 >= 20)
+		   if (selection.CompareTag(Item2) && Input.GetKeyDown(KeyCode.F) && money2 >= 20 && hitDis <= 3)
 		   {
 				money.money -= 20;
 				Vector3 position = Buyed;
@@ -57,7 +59,7 @@ public class Shop : MonoBehaviour
 				 
 		   }
 			
-		   if (selection.CompareTag(Item1) | selection.CompareTag(Item2))
+		   if (selection.CompareTag(Item1) | selection.CompareTag(Item2)  && hitDis <= 3)
 		   {  
 				Text.gameObject.SetActive(true);
 				_selection = selection;

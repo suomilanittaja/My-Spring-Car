@@ -13,6 +13,7 @@ public class PickUp : MonoBehaviour
    public Transform theDest;
    public bool picked;
    public GameObject lastPick;
+   public float hitDis;
    
    private void Start()
    {
@@ -37,16 +38,17 @@ public class PickUp : MonoBehaviour
 	   //Check if ray touch it 
 	   if (Physics.Raycast(ray, out hit))
 	   {
+		   hitDis = hit.distance;
 		   var selection = hit.transform;
 		   PickUP = hit.collider.gameObject;
-		   if (selection.CompareTag(selectableTag) && Input.GetMouseButtonDown(0) && picked == false)
+		   if (selection.CompareTag(selectableTag) && Input.GetMouseButtonDown(0) && picked == false && hitDis <= 3)
 		   {
 			 lastPick = hit.collider.gameObject;
 			 MouseDown();
 			 print("key was pressed");
 			 
 		   }
-		   if (selection.CompareTag(selectableTag2) && Input.GetMouseButtonDown(0) && picked == false)
+		   if (selection.CompareTag(selectableTag2) && Input.GetMouseButtonDown(0) && picked == false && hitDis <= 3)
 		   {
 			 lastPick = hit.collider.gameObject;
 			 MouseDown();
@@ -61,7 +63,7 @@ public class PickUp : MonoBehaviour
 		   }
 		   
 			
-		   if (selection.CompareTag(selectableTag) | selection.CompareTag(selectableTag2))
+		   if (selection.CompareTag(selectableTag) | selection.CompareTag(selectableTag2)  && hitDis <= 3)
 		   {  
 				Text.gameObject.SetActive(true);
 				_selection = selection;
