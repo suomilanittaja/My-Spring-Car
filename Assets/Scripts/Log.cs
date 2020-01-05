@@ -40,8 +40,8 @@ public class Log : MonoBehaviour
 	
 	void disabled2()
 	{
-		Instantiate(block, new Vector3(14, 1, 7), Quaternion.identity);
-		Instantiate(block, new Vector3(14, 1, 7), Quaternion.identity);
+		Instantiate(block, new Vector3(14, 1, 8), Quaternion.identity);
+		Instantiate(block, new Vector3(14, 1, 6), Quaternion.identity);
 	}
 
 }
