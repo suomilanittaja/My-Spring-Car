@@ -57,7 +57,7 @@ public class AxeWeapon : MonoBehaviour
 			 Axe.gameObject.SetActive(false);
 			 picked = false;
 			 pickAxe2.transform.position = theDest.position;
-			 //pickAxe.transform.parent = GameObject.Find("Destination").transform;
+			 
 		   }
 			
 		   if (selection.CompareTag(selectableTag)  && hitDis <= 3)
@@ -69,7 +69,7 @@ public class AxeWeapon : MonoBehaviour
 	   if (picked == true && Input.GetMouseButtonDown(0))
 		   {
 
-			 //MouseDown();
+			 
 			 print("key was pressed");
 			 anim.SetBool ("Hit", true);
 			 blade.gameObject.SetActive(true);
