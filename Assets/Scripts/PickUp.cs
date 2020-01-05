@@ -6,9 +6,9 @@ public class PickUp : MonoBehaviour
 {
 	[SerializeField] private string selectableTag = "Selectable";
 	[SerializeField] private string selectableTag2 = "Selectable";
+	
 
 	private Transform _selection;
-   public GameObject Text;
    public GameObject PickUP;
    public Transform theDest;
    public bool picked;
@@ -27,7 +27,6 @@ public class PickUp : MonoBehaviour
 	   if (_selection != null)
 	   {
 		   _selection = null;
-		   Text.gameObject.SetActive(false);
 	   }
 	   
 	   //Creating a Ray
@@ -65,7 +64,6 @@ public class PickUp : MonoBehaviour
 			
 		   if (selection.CompareTag(selectableTag) | selection.CompareTag(selectableTag2)  && hitDis <= 3)
 		   {  
-				Text.gameObject.SetActive(true);
 				_selection = selection;
 		   }
 	   }

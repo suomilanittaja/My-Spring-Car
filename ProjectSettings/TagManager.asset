@@ -8,6 +8,8 @@ TagManager:
   - Food
   - BuyItem
   - BuyItem2
+  - Axe
+  - Log
   layers:
   - Default
   - TransparentFX

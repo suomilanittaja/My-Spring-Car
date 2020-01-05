@@ -32,4 +32,5 @@ using System.Collections;
                 Debug.Log ("OPENING THE DOOR");
             }
         }
+
     }
