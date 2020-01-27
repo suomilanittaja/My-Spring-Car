@@ -17,9 +17,3 @@ Shop
 Money  
 Pause Menu; https://github.com/GreatArcStudios/unitypausemenu  
 ETC...  
-
-To-Do  
-More 3Dmodels  
-Map     
-Vehicle Model  
-
