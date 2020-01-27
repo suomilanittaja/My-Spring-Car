@@ -5,32 +5,39 @@ using System.Collections;
     {
         public bool open = false;
         Animator anim;
-     
+        private bool Pressed;
         void Start ()
         {
             anim = GetComponentInChildren<Animator> ();
             Debug.Log("GOT THE ANIMATOR");
         }
+
+        void Update ()
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                Pressed = true;
+            }
+            else 
+                Pressed = false;
+        }
      
-        void OnTriggerEnter (Collider other)
+        void OnTriggerStay (Collider other)
      
             {
-            if (other.CompareTag("Player"))
+            if (other.CompareTag("Player") && Pressed == true && open == false)
             {
+                open = true;
                 anim.SetBool ("open", true);
                 Debug.Log ("OPENING THE DOOR");
             }
-     
-        }
-     
-        void OnTriggerExit (Collider other)
-     
+            else if (other.CompareTag("Player") && Pressed == true && open == true)
             {
-            if (other.CompareTag("Player"))
-            {
+                open = false;
                 anim.SetBool ("open", false);
-                Debug.Log ("OPENING THE DOOR");
+                Debug.Log ("Closing THE DOOR");
             }
+     
         }
 
     }

@@ -13,6 +13,7 @@ public class EnterandExit : MonoBehaviour
 	public Transform Exit;
 	public Transform PLayer;
 	public Engine engine;
+	public GameObject Camera;
 	
 	void OnTriggerExit (Collider other)
 	{
@@ -43,6 +44,7 @@ public class EnterandExit : MonoBehaviour
 		{
 			print("rte");
 			carControll.enabled = true;
+			Camera.gameObject.SetActive(true);
 			player.gameObject.SetActive(false);
 			print("drive");
 			StartCoroutine(Time2());
@@ -54,6 +56,7 @@ public class EnterandExit : MonoBehaviour
 			carControll.enabled = false;
 			player.gameObject.SetActive(true);
 			enter = false;
+			Camera.gameObject.SetActive(false);
 			PLayer.transform.position = Exit.transform.position;
 		}
 			
