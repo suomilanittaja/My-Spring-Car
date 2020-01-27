@@ -17,6 +17,5 @@ public class Money : MonoBehaviour
     void Update()
     {
         text.text = money.ToString() + "€";
-
     }
 }
