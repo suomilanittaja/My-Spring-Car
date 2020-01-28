@@ -14,6 +14,7 @@ public class EnterandExit : MonoBehaviour
 	public Transform playerPos;
 	public Engine engine;
 	public GameObject Camera;
+	public GameObject carUI;
 	
 	void OnTriggerExit (Collider other)
 	{
@@ -49,6 +50,7 @@ public class EnterandExit : MonoBehaviour
 			print("drive");
 			StartCoroutine(Time2());
 			text.gameObject.SetActive(false);
+			carUI.gameObject.SetActive(true);
 		}
 		
 		if (enter == false && Input.GetKeyDown(KeyCode.Return))
@@ -58,6 +60,7 @@ public class EnterandExit : MonoBehaviour
 			enter = false;
 			Camera.gameObject.SetActive(false);
 			playerPos.transform.position = Exit.transform.position;
+			carUI.gameObject.SetActive(false);
 		}
 			
 	}
