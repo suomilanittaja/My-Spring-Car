@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Money : MonoBehaviour
 {
 	public int money;
-	public Text text;
+	public TextMeshProUGUI text;
     // Start is called before the first frame update
     void Start()
     {
