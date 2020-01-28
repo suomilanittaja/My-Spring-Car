@@ -1,17 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RVP;
 
 public class EnterandExit : MonoBehaviour
 {
-    public CarControll carControll;
+    public  BasicInput carControll;
 	public GameObject text;
 	public GameObject text2;
 	public GameObject player;
-	public GameObject Car;
 	public bool enter;
 	public Transform Exit;
-	public Transform PLayer;
+	public Transform playerPos;
 	public Engine engine;
 	public GameObject Camera;
 	
@@ -57,7 +57,7 @@ public class EnterandExit : MonoBehaviour
 			player.gameObject.SetActive(true);
 			enter = false;
 			Camera.gameObject.SetActive(false);
-			PLayer.transform.position = Exit.transform.position;
+			playerPos.transform.position = Exit.transform.position;
 		}
 			
 	}
@@ -66,5 +66,11 @@ public class EnterandExit : MonoBehaviour
 		yield return new WaitForSeconds(1);
 		enter = false;
 		
+	}
+
+	void Start ()
+	{
+		Camera.gameObject.SetActive(false);
+		carControll.enabled = false;
 	}
 }
