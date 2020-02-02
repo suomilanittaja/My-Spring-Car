@@ -10,7 +10,7 @@ public class PickUp : MonoBehaviour
 	
 
 	private Transform _selection;
-   public GameObject PickUP;
+   private GameObject PickUP;
    public Transform theDest;
    public bool picked;
    public GameObject lastPick;

@@ -5,7 +5,7 @@ using UnityEngine;
 public class LogManager : MonoBehaviour
 {
 	public GameObject Log;
-	public Log log;
+	private Log logScript;
 	public bool Disabled;
 
     // This script will simply instantiate the Prefab when the game starts.

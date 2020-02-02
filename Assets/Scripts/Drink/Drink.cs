@@ -10,7 +10,7 @@ public class Drink : MonoBehaviour
    
    public PlayerStats stats;
    public GameObject Text;
-   public GameObject Beer;
+   private GameObject Beer;
    public float hitDis;
 	
 

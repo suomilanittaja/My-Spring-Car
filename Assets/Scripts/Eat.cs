@@ -11,7 +11,7 @@ public class Eat : MonoBehaviour
    public PlayerStats stats;
    
    public GameObject Text;
-   public GameObject Food;
+   private GameObject Food;
    public float hitDis;
    
    private void Update()

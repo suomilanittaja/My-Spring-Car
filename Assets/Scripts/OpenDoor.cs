@@ -4,16 +4,11 @@ using System.Collections;
    public class OpenDoor : MonoBehaviour
     {
         public bool open = false;
-        Animator anim;
+        public Animator anim;
         private bool Pressed;
         public GameObject textOpen;
         public GameObject textClose;
 
-        void Start ()
-        {
-            anim = GetComponentInChildren<Animator> ();
-            Debug.Log("GOT THE ANIMATOR");
-        }
 
         void Update ()
         {
