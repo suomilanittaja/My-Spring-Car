@@ -34,8 +34,7 @@ public class PlayerStats : MonoBehaviour
 	public GameObject Died;
 	public GameObject Player;
 	public GameObject Camera;
-	public Drunk DrunkScript;
-	public Drunk2 DrunkScript2;
+	public GameObject PPP_Drunk;
 	
 	private void Start()
 	{
@@ -43,7 +42,6 @@ public class PlayerStats : MonoBehaviour
 		StaminaBar.maxValue = Stamina;
 		HungerBar.maxValue = Hunger;
 		ThirstBar.maxValue = Thirst;
-		DrunkBar.maxValue = Drunk;
 		
 		updateUI();
 	}	
@@ -67,19 +65,13 @@ public class PlayerStats : MonoBehaviour
 		
 		if(Drunk <= 0)
 		{
-			DrunkScript.enabled = false;
+			PPP_Drunk.gameObject.SetActive(false);
 		}
 		else
 		{
 			if(Drunk >= 0)
 			{
-				DrunkScript.enabled = true;
-				DrunkScript2.enabled = false;
-				if(Drunk >= 50)
-				{
-					DrunkScript2.enabled = true;
-					DrunkScript.enabled = false;
-				}
+				PPP_Drunk.gameObject.SetActive(true);
 			}
 			Drunk -= drunkOverTime * Time.deltaTime;
 			
