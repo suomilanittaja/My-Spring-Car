@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 5512773009300997998}
   - component: {fileID: 5512773009300997997}
   - component: {fileID: 5512773009300997999}
-  - component: {fileID: 5512773009300997992}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -130,19 +129,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterBase: {fileID: 5512773010349462488}
   lookSpeed: 10
---- !u!114 &5512773009300997992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5512773009300997987}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b8ab59b8050ac54eb83348978062c45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 6943528dbf7611b4f8daca9ccc00e76e, type: 2}
 --- !u!1 &5512773010349462493
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,6 +178,9 @@ MonoBehaviour:
   moveSpeed: 5
   sprintSpeedMultiplier: 2
   jumpHeight: 2
+  stamina: {fileID: 0}
+  value2: 0
+  canJump: 0
 --- !u!143 &5512773010349462494
 CharacterController:
   m_ObjectHideFlags: 0

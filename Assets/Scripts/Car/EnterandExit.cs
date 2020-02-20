@@ -5,54 +5,42 @@ using RVP;
 
 public class EnterandExit : MonoBehaviour
 {
-    public  BasicInput carControll;
+  public BasicInput carControll;
 	public GameObject text;
-	public GameObject text2;
 	public GameObject player;
 	public bool enter;
 	public Transform Exit;
 	public Transform playerPos;
-	public Engine engine;
 	public GameObject Camera;
 	public GameObject carUI;
-	
+
 	void OnTriggerExit (Collider other)
 	{
 		text.gameObject.SetActive(false);
 		enter = false;
-		text2.gameObject.SetActive(false);
 	}
-	
+
 	void OnTriggerEnter (Collider Hit)
 	{
 		if (Hit.gameObject == player)
 		{
-			if (engine.engine2 == true)
-			{
 				text.gameObject.SetActive(true);
 				enter = true;
-			}
-			else if (engine.engine2 == false)
-			{
-				text2.gameObject.SetActive(true);
-			}
 		}
-			
+
 	}
 	void Update()
 	{
 		if (enter == true && Input.GetKeyDown(KeyCode.Return))
 		{
-			print("rte");
 			carControll.enabled = true;
 			Camera.gameObject.SetActive(true);
 			player.gameObject.SetActive(false);
-			print("drive");
 			StartCoroutine(Time2());
 			text.gameObject.SetActive(false);
 			carUI.gameObject.SetActive(true);
 		}
-		
+
 		if (enter == false && Input.GetKeyDown(KeyCode.Return))
 		{
 			carControll.enabled = false;
@@ -62,13 +50,13 @@ public class EnterandExit : MonoBehaviour
 			playerPos.transform.position = Exit.transform.position;
 			carUI.gameObject.SetActive(false);
 		}
-			
+
 	}
 	IEnumerator Time2()
-	{	
+	{
 		yield return new WaitForSeconds(1);
 		enter = false;
-		
+
 	}
 
 	void Start ()
