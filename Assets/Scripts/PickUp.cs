@@ -7,76 +7,51 @@ public class PickUp : MonoBehaviour
 	[SerializeField] private string selectableTag = "Selectable";
 	[SerializeField] private string selectableTag2 = "Selectable";
 	[SerializeField] private string selectableTag3 = "Selectable";
-	
 
-	private Transform _selection;
+
+	 private Transform _selection;
    private GameObject PickUP;
    public Transform theDest;
    public bool picked;
    public GameObject lastPick;
-   public float hitDis;
-   
+   public Raycast rayScript;
+
    private void Start()
    {
 	   picked = false;
    }
-   
+
    private void Update()
    {
-	   
-	   //Check if ray dont touch it anymore
-	   if (_selection != null)
-	   {
-		   _selection = null;
-	   }
-	   
-	   //Creating a Ray
-	   var ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width/2f, Screen.height/2f, 0f));
-	   RaycastHit hit;
-	   
-	
-	   //Check if ray touch it 
-	   if (Physics.Raycast(ray, out hit))
-	   {
-		   hitDis = hit.distance;
-		   var selection = hit.transform;
-		   PickUP = hit.collider.gameObject;
-		   if (selection.CompareTag(selectableTag) && Input.GetMouseButtonDown(0) && picked == false && hitDis <= 3)
-		   {
-			 lastPick = hit.collider.gameObject;
-			 MouseDown();
-			 print("key was pressed");
-			 
-		   }
-		   if (selection.CompareTag(selectableTag2) && Input.GetMouseButtonDown(0) && picked == false && hitDis <= 3)
-		   {
-			 lastPick = hit.collider.gameObject;
-			 MouseDown();
-			 print("key was pressed");
-		   }
-		   
-		   if (selection.CompareTag(selectableTag3) && Input.GetMouseButtonDown(0) && picked == false && hitDis <= 3)
-		   {
-			 lastPick = hit.collider.gameObject;
-			 MouseDown();
-			 print("key was pressed");
-		   }
-		   
-		   
-		   if (Input.GetMouseButtonUp(0))
-		   {
-			 MouseUp();
-			 print("key was pressed");
-		   }
-		   
-			
-		   if (selection.CompareTag(selectableTag) | selection.CompareTag(selectableTag2) | selection.CompareTag(selectableTag3) && hitDis <= 3)
-		   {  
-				_selection = selection;
-		   }
-	   }
-   }  
-	
+		 PickUP = rayScript.rayHitted;
+		 if (rayScript.rayHitted.CompareTag(selectableTag) && Input.GetMouseButtonDown(0) && picked == false)
+		 {
+		 lastPick = rayScript.rayHitted;
+		 MouseDown();
+		 print("key was pressed");
+		 }
+		 if (rayScript.rayHitted.CompareTag(selectableTag2) && Input.GetMouseButtonDown(0) && picked == false)
+		 {
+		 lastPick = rayScript.rayHitted;
+		 MouseDown();
+		 print("key was pressed");
+		 }
+
+		 if (rayScript.rayHitted.CompareTag(selectableTag3) && Input.GetMouseButtonDown(0) && picked == false)
+		 {
+		 lastPick = rayScript.rayHitted;
+		 MouseDown();
+		 print("key was pressed");
+		 }
+
+
+		 if (Input.GetMouseButtonUp(0))
+		 {
+		 MouseUp();
+		 print("key was pressed");
+		 }
+   }
+
 
 	void MouseDown()
 	{
@@ -86,13 +61,12 @@ public class PickUp : MonoBehaviour
 		PickUP.transform.parent = GameObject.Find("Destination").transform;
 		picked = true;
 	}
-	
+
 	void MouseUp()
 	{
 		picked = false;
 		lastPick.GetComponent<Rigidbody>().isKinematic = false;
 		lastPick.transform.parent = null;
-		lastPick.GetComponent<Rigidbody>().useGravity = true;	
+		lastPick.GetComponent<Rigidbody>().useGravity = true;
 	}
 }
-

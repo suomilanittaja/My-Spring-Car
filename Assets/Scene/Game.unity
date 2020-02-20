@@ -10332,13 +10332,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 523147286}
-  - component: {fileID: 523147285}
   - component: {fileID: 523147288}
   - component: {fileID: 523147287}
   - component: {fileID: 523147289}
   - component: {fileID: 523147290}
   - component: {fileID: 523147291}
   - component: {fileID: 523147292}
+  - component: {fileID: 523147293}
+  - component: {fileID: 523147294}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Log
@@ -10346,22 +10347,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &523147285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 523147284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26a2754b7f81c4a4ab0874945b2c41ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectableTag: Beer
-  stats: {fileID: 523147292}
-  Text: {fileID: 433331489}
-  hitDis: 0
 --- !u!4 &523147286
 Transform:
   m_ObjectHideFlags: 0
@@ -10405,7 +10390,7 @@ MonoBehaviour:
   selectableTag: Food
   stats: {fileID: 523147292}
   Text: {fileID: 587551906}
-  hitDis: 0
+  rayScript: {fileID: 523147293}
 --- !u!114 &523147289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10424,7 +10409,7 @@ MonoBehaviour:
   theDest: {fileID: 1083602577}
   picked: 0
   lastPick: {fileID: 0}
-  hitDis: 0
+  rayScript: {fileID: 523147293}
 --- !u!114 &523147290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10439,7 +10424,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectableTag: Axe
   Text: {fileID: 112343389}
-  hitDis: 0
   Axe: {fileID: 1546847142}
   pickAxe: {fileID: 8296172668745051935}
   picked: 0
@@ -10448,6 +10432,7 @@ MonoBehaviour:
   blade: {fileID: 97121114}
   theDest: {fileID: 1083602577}
   pickAxe2: {fileID: 8296172668745051935}
+  rayScript: {fileID: 523147293}
 --- !u!114 &523147291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10496,6 +10481,38 @@ MonoBehaviour:
   Player: {fileID: 341231561}
   Camera: {fileID: 1048617463}
   PPP_Drunk: {fileID: 1044188582}
+--- !u!114 &523147293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523147284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee880d7aa5908482813bc758d6dd5a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selection: {fileID: 0}
+  Text: {fileID: 0}
+  hitDis: 0
+  rayHitted: {fileID: 0}
+--- !u!114 &523147294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523147284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86a961149e1f91bfe9291cc711ef1709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectableTag: Beer
+  stats: {fileID: 523147292}
+  Text: {fileID: 433331489}
+  rayScript: {fileID: 523147293}
 --- !u!1 &527284734
 GameObject:
   m_ObjectHideFlags: 0
@@ -36518,12 +36535,12 @@ MonoBehaviour:
   Item2: BuyItem2
   Text: {fileID: 568348784}
   Item: {fileID: 0}
-  Buyed: {x: 47, y: 2, z: 618}
+  Buyed: {x: 52, y: 2, z: 611}
   money: {fileID: 523147287}
   money2: 0
-  drink: {fileID: 523147285}
+  drink: {fileID: 523147294}
   eat: {fileID: 523147288}
-  hitDis: 0
+  rayScript: {fileID: 523147293}
 --- !u!1001 &1852509188
 PrefabInstance:
   m_ObjectHideFlags: 0
