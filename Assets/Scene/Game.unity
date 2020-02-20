@@ -14137,8 +14137,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 653107394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.13, z: -0.06}
-  m_LocalScale: {x: 2.0602, y: 1.0231119, z: 5.215721}
+  m_LocalPosition: {x: -0.089, y: 0.3, z: -0.06}
+  m_LocalScale: {x: 1.8830228, y: 0.68323416, z: 5.215721}
   m_Children: []
   m_Father: {fileID: 1507551700}
   m_RootOrder: 17
@@ -14154,8 +14154,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8783672, y: 1, z: 0.8375951}
-  m_Center: {x: 0.0146017065, y: 0, z: 0.01820032}
+  m_Size: {x: 0.6848025, y: 0.33262125, z: 0.69594955}
+  m_Center: {x: 0.063784584, y: 0.22096369, z: 0.00533049}
 --- !u!23 &653107397
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -41189,7 +41189,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 53474946}
-        m_MethodName: Cursor3
+        m_MethodName: Lock
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -41837,6 +41837,16 @@ PrefabInstance:
         type: 3}
       propertyPath: lookSpeed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512773009300997999, guid: ef14b662b79bc2a48a40267fa494064b,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 465246571}
+    - target: {fileID: 5512773009300997999, guid: ef14b662b79bc2a48a40267fa494064b,
+        type: 3}
+      propertyPath: sensitivity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5512773010349462488, guid: ef14b662b79bc2a48a40267fa494064b,
         type: 3}

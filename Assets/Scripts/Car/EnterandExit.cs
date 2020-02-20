@@ -44,10 +44,10 @@ public class EnterandExit : MonoBehaviour
 		if (enter == false && Input.GetKeyDown(KeyCode.Return))
 		{
 			carControll.enabled = false;
+      playerPos.transform.position = Exit.transform.position;
 			player.gameObject.SetActive(true);
 			enter = false;
 			Camera.gameObject.SetActive(false);
-			playerPos.transform.position = Exit.transform.position;
 			carUI.gameObject.SetActive(false);
 		}
 
