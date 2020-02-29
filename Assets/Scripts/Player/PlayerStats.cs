@@ -35,6 +35,7 @@ public class PlayerStats : MonoBehaviour
 	public GameObject Player;
 	public GameObject Camera;
 	public GameObject PPP_Drunk;
+	public GameObject PPP_Player;
 
 	private void Start()
 	{
@@ -67,11 +68,13 @@ public class PlayerStats : MonoBehaviour
 		if(Drunk <= 0)
 		{
 			PPP_Drunk.gameObject.SetActive(false);
+			PPP_Player.gameObject.SetActive(true);
 		}
 		else
 		{
 			if(Drunk >= 0)
 			{
+				PPP_Player.gameObject.SetActive(false);
 				PPP_Drunk.gameObject.SetActive(true);
 			}
 			Drunk -= drunkOverTime * Time.deltaTime;

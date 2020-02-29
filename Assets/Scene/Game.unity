@@ -10481,6 +10481,7 @@ MonoBehaviour:
   Player: {fileID: 341231561}
   Camera: {fileID: 1048617463}
   PPP_Drunk: {fileID: 1044188582}
+  PPP_Player: {fileID: 227299631}
 --- !u!114 &523147293
 MonoBehaviour:
   m_ObjectHideFlags: 0
