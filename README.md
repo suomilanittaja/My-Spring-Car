@@ -1,4 +1,4 @@
-My Spring Car is a free open-source game like My Summer Car with easy modding and customizing.  
+My Spring Car is a free open-source game Inspired By My Summer Car with easy modding and customizing.  
 Request unity 2019.3.2f1 or later   
 Join our discord: https://discord.me/volfase  
 
