@@ -12,6 +12,7 @@ public class CarCrash : MonoBehaviour
   public PlayerStats Health;
   public GameObject camera;
   public GameObject settings;
+  public bool Died = false;
 
     void Start()
     {
@@ -21,15 +22,24 @@ public class CarCrash : MonoBehaviour
     void Update()
     {
       s = (vp.velMag * 2.23694f);
-    }
-    void OnCollisionEnter()
-    {
-      if (s > 50)
+      if (Died == true)
       {
         camera.gameObject.SetActive(false);
         settings.gameObject.SetActive(false);
         Health.Health -= 100;
         print ("died");
       }
+    }
+    void OnCollisionEnter()
+    {
+      if (s > 50)
+      {
+        StartCoroutine(Timer1());
+      }
+    }
+    IEnumerator Timer1()
+    {
+      yield return new WaitForSeconds(3);
+      Died = true;
     }
 }

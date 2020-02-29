@@ -14155,8 +14155,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6848025, y: 0.33262125, z: 0.69594955}
-  m_Center: {x: 0.063784584, y: 0.22096369, z: 0.00533049}
+  m_Size: {x: 0.55582905, y: 0.33262122, z: 0.68523395}
+  m_Center: {x: -0.0007021741, y: 0.22096369, z: -0.000027289781}
 --- !u!23 &653107397
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27265,6 +27265,7 @@ MonoBehaviour:
   Health: {fileID: 523147292}
   camera: {fileID: 535406431}
   settings: {fileID: 685254260}
+  Died: 0
 --- !u!1 &1477104453
 GameObject:
   m_ObjectHideFlags: 0
@@ -28260,6 +28261,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enter/Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 2379718127220286862, guid: ec973bb0f6b1e0286943ec2484f0d802,
+        type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2379718127220286862, guid: ec973bb0f6b1e0286943ec2484f0d802,
+        type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2379718127220286862, guid: ec973bb0f6b1e0286943ec2484f0d802,
+        type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2379718127220286862, guid: ec973bb0f6b1e0286943ec2484f0d802,
+        type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2379718127220289294, guid: ec973bb0f6b1e0286943ec2484f0d802,
         type: 3}
