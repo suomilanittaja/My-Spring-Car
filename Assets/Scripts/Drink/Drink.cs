@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class Drink : MonoBehaviour
 {
@@ -11,6 +12,13 @@ public class Drink : MonoBehaviour
    public GameObject Text;
    private GameObject Beer;
    public Raycast rayScript;
+
+
+
+   void Start()
+   {
+
+   }
 
    private void Update()
    {
