@@ -24,7 +24,7 @@ public class AxeWeapon : MonoBehaviour
 
 	private void Update()
    {
-		 if (rayScript.rayHitted.CompareTag(selectableTag) && Input.GetKeyDown(KeyCode.F))
+		 if (rayScript.rayHitted.CompareTag(selectableTag) && Input.GetKeyDown(KeyCode.F) && rayScript.hitDis <= 5)
 		 {
 		 print("key was pressed");
 		 pickAxe.gameObject.SetActive(false);
@@ -41,7 +41,7 @@ public class AxeWeapon : MonoBehaviour
 
 		 }
 
-		 if (rayScript.rayHitted.CompareTag(selectableTag))
+		 if (rayScript.rayHitted.CompareTag(selectableTag) && rayScript.hitDis <= 5)
 		 {
 			Text.gameObject.SetActive(true);
 		 }
