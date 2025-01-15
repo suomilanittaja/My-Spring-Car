@@ -1,6 +1,6 @@
 My Spring Car is a free open-source community driven game Inspired By My Summer Car.  
 Please use unity 2019.3.7f1 or later   
-Join our discord: https://discord.me/volfase  
+
 
 [![](https://i.ibb.co/QF69qTX/Screenshot-from-2020-01-28-22-03-29.png)](https://www.youtube.com/watch?v=Un4r-O9YKGk&feature=youtu.be)  
 Features  
